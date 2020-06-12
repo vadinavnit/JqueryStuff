@@ -1,0 +1,18 @@
+    function chkOrderNo(orderId) {
+        if (orderIds.length > 0) {
+            if (orderIds.includes(orderId)) {
+                const index = orderIds.indexOf(orderId);
+                orderIds.splice(index, 1);
+            }
+            else {
+                orderIds.push(orderId);
+            }
+        } else {
+            orderIds.push(orderId);
+        }
+        if (orderIds.length > 0) {
+            $("#OrdStatus").show();
+        } else {
+            $("#OrdStatus").hide();
+        }
+    }
